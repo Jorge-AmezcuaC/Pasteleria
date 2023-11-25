@@ -1,0 +1,6 @@
+/env
+/pasteleriaAdm/api/__pycache__/
+/pasteleriaAdm/api/migrations/__pycache__/
+/pasteleriaAdm/pasteleriaAdm/__pycache__/
+/pasteleriaAdm/db.sqlite3
+*.pyc
