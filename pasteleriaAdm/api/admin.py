@@ -2,23 +2,35 @@ from django.contrib import admin
 from .models import (
     Empleado,
     Direccion,
-    Estado,
     Local, 
-    Municipio,
+    Compra,
     Pasteles,
     Puesto,
     Sabores,
-    VentaPasteles,
-    Ventas
+    Ventas,
+    Proveedor
 )
 
-admin.site.register(Empleado)
-admin.site.register(Direccion)
-admin.site.register(Estado)
-admin.site.register(Local)
-admin.site.register(Municipio)
-admin.site.register(Pasteles)
-admin.site.register(Puesto)
+from .adminForms import (
+    PastelAdmin,
+    CompraAdmin,
+    DireccionAdmin,
+    LocalAdmin,
+    ProveedorAdmin,
+    VentaAdmin,
+    EmpleadoAdmin
+)
+
+admin.site.site_header = 'Mi Pasteleria'
+admin.site.site_title = 'Pasteleria'
+admin.site.name = "Administracion de la pasteleria"
+
+admin.site.register(Compra, CompraAdmin)
+admin.site.register(Ventas, VentaAdmin)
+admin.site.register(Proveedor, ProveedorAdmin)
+admin.site.register(Local, LocalAdmin)
+admin.site.register(Empleado, EmpleadoAdmin)
+admin.site.register(Direccion, DireccionAdmin)
+admin.site.register(Pasteles, PastelAdmin)
 admin.site.register(Sabores)
-admin.site.register(VentaPasteles)
-admin.site.register(Ventas)
+admin.site.register(Puesto)
